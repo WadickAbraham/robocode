@@ -14,10 +14,8 @@ public class wadickabraham extends Robot{
 
         while(true){
             //this repeasts forever until you die 
-            ahead(Math.random() * 400);
-            turnGunRight(90);
-
-            turnGunRight(360);
+            ahead(Math.random()*150);
+            turnRight((Math.random()*120));
         
 
 
@@ -38,6 +36,13 @@ public class wadickabraham extends Robot{
             double gunTurn = absoluteBearing - getGunHeading();
 
             turnGunLeft(gunTurn);
+
+            fire(1);  
+
+            
+
+
+        
         
     }
 
