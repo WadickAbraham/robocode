@@ -17,12 +17,8 @@ public class wadickabraham extends Robot{
             ahead(Math.random() * 400);
             turnGunRight(90);
 
-            
+            turnGunRight(360);
         
-
-
-
-
 
 
 
@@ -32,8 +28,21 @@ public class wadickabraham extends Robot{
 
 
 
-
-
-
     }
+
+
+    public void onScannedRobot(ScannedRobotEvent e){
+
+            double absoluteBearing = getHeading() + e.getBearing();
+
+            double gunTurn = absoluteBearing - getGunHeading();
+
+            turnGunLeft(gunTurn);
+        
+    }
+
+
+
+
+
 }
